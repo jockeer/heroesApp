@@ -12,17 +12,20 @@ export const DashboardRoutes = () => {
   return (
     <>
         <Navbar />
-        <Routes>
-            <Route path="marvel" element={<MarvelScreen />} />
-            <Route path="dc" element={<DcScreen />} />
+        <div className='container'>
+          <Routes>
+              <Route path="marvel" element={<MarvelScreen />} />
+              <Route path="dc" element={<DcScreen />} />
 
-            <Route path="search" element={<SearchScreen />} />
-            <Route path="hero" element={<HeroScreen />} />
+              <Route path="search" element={<SearchScreen />} />
+              <Route path="hero/:id" element={<HeroScreen />} />
 
 
-            <Route path="/" element={<MarvelScreen />} />
+              <Route path="/" element={<MarvelScreen />} />
 
-        </Routes>
+          </Routes>
+
+        </div>
     </>
   )
 }
