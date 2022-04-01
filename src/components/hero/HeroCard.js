@@ -2,13 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
+
+const heroImages = require.context('../../assets/',true)
+
 export const HeroCard = ({ hero }) => {
   return (
     <div className="col animate__animated animate__fadeIn">
         <div className='card'>
             <div className="row no-gutters">
                 <div className="col-4">
-                    <img src={`/assets/${hero.id}.jpg`} className="card-img" alt={hero.superhero} />
+                    <img 
+                        // src={`/assets/${hero.id}.jpg`} 
+                        src={ heroImages(`./${hero.id}.jpg`) }
+                        className="card-img" 
+                        alt={hero.superhero} 
+                    />
 
                 </div>
                 <div className="col-8">

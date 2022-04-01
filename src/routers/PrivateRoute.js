@@ -7,8 +7,6 @@ export const PrivateRoute = ({ children }) => {
 
     const location = useLocation();
 
-    console.log(location);
-
     localStorage.setItem('lastPath', location.pathname + location.search)
 
     return user.logged 
